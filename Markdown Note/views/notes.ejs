@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <h2 class="app-heading text-center display-4 my-3">Notes Dashboard</h2>
+    <div class="notes-container">
+        <% notes.forEach(note => { %>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><%= note.title %></h5>
+                    <div class="card-text"><%- note.content %></div>
+                    <a href="/editnote/<%= note.id %>" class="btn btn-primary mt-2">Edit</a>
+                    <form action="/deletenote/<%= note.id %>" method="POST" class="mt-2">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+</div>
+
+<%- include("partials/footer.ejs") %>
+

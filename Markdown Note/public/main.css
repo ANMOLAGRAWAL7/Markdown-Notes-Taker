@@ -1,0 +1,233 @@
+/* Base styling */
+body {
+    background-color: #f5f5f5;
+    font-family: 'Titillium Web', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #ff7043;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header img {
+    width: 150px;
+    height: auto;
+    margin-top: -30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.app-heading {
+    color: #ff7043;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+/* Card styling */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.card-title {
+    background-color: #ffcc80;
+    color: #333;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    margin: 0;
+    font-weight: 600;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.markdown-textarea,
+.rendered-html-output {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    height: 400px;
+    overflow-y: auto;
+    font-size: 1rem;
+}
+
+.markdown-textarea {
+    resize: none;
+    /* Disable textarea resizing */
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 8px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #ff7043;
+    border-color: #ff7043;
+}
+
+.btn-primary:hover {
+    background-color: #ff5722;
+    border-color: #ff5722;
+}
+
+.btn-secondary {
+    color: #333;
+    background-color: #ffcc80;
+    border-color: #ffcc80;
+    display: block;
+    margin: 20px auto;
+    /* Center the button */
+}
+
+.btn-secondary:hover {
+    background-color: #ffb74d;
+    border-color: #ffb74d;
+}
+
+/* Form styling */
+.file-upload-form {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.25rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.form-control-file {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-top: 0.5rem;
+}
+
+/* Search form styling */
+.search-form {
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    width: 100%;
+}
+
+.input-group .form-control {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.input-group .input-group-append .btn {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #ffcc80;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    height: calc(100% - 2px);
+    /* Ensure button height matches input */
+    margin-left: -1px;
+    /* Remove gap between input and button */
+}
+
+.input-group .input-group-append .btn:hover {
+    background-color: #ffb74d;
+    border-color: #ffb74d;
+}
+
+.btn {
+    border-radius: 8px;
+}
+
+.btn-primary {
+    background-color: #ff7043;
+    border-color: #ff7043;
+}
+
+.btn-secondary {
+    background-color: #ffcc80;
+    border-color: #ffcc80;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Layout adjustments */
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: -0.75rem;
+    /* Adjust margin to account for card margin */
+}
+
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.75rem;
+    /* Add padding to allow space between columns */
+    width: 50%;
+}
+
+#grammarCheckResult {
+    margin-top: 2rem;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Notes Dashboard Specific Styles */
+.notes-container {
+    max-width: 100%;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}

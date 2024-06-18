@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <h2 class="app-heading text-center display-4 my-3">Edit Note</h2>
+    <form action="/updatenote/<%= note.id %>" method="POST">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" class="form-control" value="<%= note.title %>" required>
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea id="content" name="content" class="form-control markdown-textarea" rows="10" required><%= note.content %></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Note</button>
+    </form>
+    <a href="/notesdashboard" class="btn btn-secondary mt-3">Cancel</a>
+</div>
+
+<%- include("partials/footer.ejs") %>

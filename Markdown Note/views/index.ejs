@@ -1,0 +1,58 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+    <h2 class="app-heading text-center display-4 my-3">Markdown Notes Taker</h2>
+    <!-- Buttons aligned to the right -->
+    <div class="d-flex justify-content-end">
+        <!-- Add Note Button -->
+        <button class="btn btn-primary add-note-button mt-3">Add Note</button>
+        
+        <!-- View all notes dashboard -->
+        <form action="/notesdashboard" method="get">
+            <button class="btn btn-primary view-notes-button mt-3 ml-2" type="submit">View Notes</button>
+        </form>
+    </div>
+    <!-- File Upload Form -->
+    <form class="file-upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="file">Upload Markdown File:</label>
+            <input type="file" class="form-control-file" id="file" name="file">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+    <!-- Search Form -->
+    <div class="search-form mb-3">
+        <div class="input-group">
+            <input type="text" class="form-control search-input" placeholder="Search within the note">
+            <div class="input-group-append">
+                <button class="btn btn-secondary search-button" type="button">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 d-flex flex-column">
+            <div class="card markdown-editor flex-grow-1">
+                <h4 class="card-title text-center">Markdown</h4>
+                <div class="card-body">
+                    <textarea class="form-control markdown-textarea" rows="20"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex flex-column">
+            <div class="card rendered-output flex-grow-1">
+                <h4 class="card-title text-center">Output</h4>
+                <div class="card-body">
+                    <div id="markdown-output" class="rendered-html-output"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-secondary grammar-check-button mt-3 bg-color=green">Check Grammar</button>
+    <div id="grammarCheckResult" class="card mt-4">
+        <h4 class="card-title text-center">Grammar Check Result</h4>
+        <div class="card-body render-grammar-check"></div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="/main.js"></script>
+<script src="/notes.js"></script>
+<%- include("partials/footer.ejs") %>
