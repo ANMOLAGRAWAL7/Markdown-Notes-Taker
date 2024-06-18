@@ -24,14 +24,14 @@
 
 ### STEPS TO RUN THE APPLICATION:
 1.Cd over to your folder \
-2.Setup postgres databse as:
--->const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: your postgres database name,
-  password:your postgres password,
-  port: your postgres port,
-});
+2.Setup postgres databse as: \
+-->const db = new pg.Client({ \
+  user: "postgres", \
+  host: "localhost", \
+  database: your postgres database name, \
+  password: your postgres password, \
+  port: your postgres port, \
+}); \
 3.run npm i \
 4.run node index.js \
 5.Headover to your browser at http://localhost:3000
